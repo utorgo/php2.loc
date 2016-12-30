@@ -4,7 +4,7 @@
 namespace App\Models;
 
 
-class Model
+abstract class Model
 {
     const TABLE = '';
 
@@ -17,4 +17,6 @@ class Model
             static::class //self::class //'App\Models\User'
         );
     }
+
+    //abstract public function getName();
 }
