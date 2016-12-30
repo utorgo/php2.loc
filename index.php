@@ -5,7 +5,7 @@
 
     //$res = $db->execute('CREATE TABLE foo (id SERIAL)');
 
-    $res = $db->execute('SELECT * FROM persons');
+    $res = $db->query('SELECT * FROM persons');
 
     var_dump($res);
 
