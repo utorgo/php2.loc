@@ -1,12 +1,14 @@
 <?php
+    use App\Models\User;
+    use App\Views\View;
+
     require __DIR__ . '/autoload.php';
+    //require __DIR__ . '/vendor/autoload.php';
 
-    //$table = \App\Models\User::$table;
-    $table = \App\Models\User::TABLE;
+    $articles = \App\Models\News::findAll();
 
-    echo $table . '</br>';
+    $view = new \App\Views\View();
 
-    $users = \App\Models\User::findAll();
+    $view->assign('articles', $articles);
 
-    var_dump($users);
-
+    $view->display(__DIR__ . '/templates/news.php');

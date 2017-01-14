@@ -2,8 +2,8 @@
 
 namespace App;
 
-
 class Db
+
 {
     protected $dbh;
 
