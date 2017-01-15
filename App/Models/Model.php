@@ -8,7 +8,7 @@ abstract class Model
 
     public static function findAll()
     {
-        $db = new \App\Db();
+        $db = \App\Db::instance();
 
         return $db->query(
             'SELECT * FROM ' . static::TABLE, //self::TABLE, //self::$table,
@@ -19,7 +19,7 @@ abstract class Model
 
     public static function findById($id='1')
     {
-        $db = new \App\Db();
+        $db = \App\Db::instance();
 
         return $db->query(
             "SELECT * FROM " . static::TABLE ." WHERE id=:id", //self::TABLE, //self::$table,

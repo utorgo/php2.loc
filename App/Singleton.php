@@ -13,10 +13,10 @@ class Singleton
 
     public static function instance()
     {
-        if ( NUlL === self::$instance)
+        if ( NUlL === static::$instance)
         {
-            self::$instance = new self;
+            static::$instance = new static;
         }
-        return self::$instance;
+        return static::$instance;
     }
 }
