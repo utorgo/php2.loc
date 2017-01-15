@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Singleton
+trait Singleton
 {
     protected static $instance;
 
