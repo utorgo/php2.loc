@@ -13,6 +13,10 @@ class Singleton
 
     public static function instance()
     {
-            return self::$instance = new self;
+        if ( NUlL === self::$instance)
+        {
+            self::$instance = new self;
+        }
+        return self::$instance;
     }
 }
