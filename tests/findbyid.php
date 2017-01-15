@@ -11,6 +11,6 @@ var_dump($user);
 echo '</br>';
 $table = \App\Models\News::TABLE;
 echo $table . '</br>';
-$article = \App\Models\News::findById(4);
+$article = \App\Models\News::findById(2);
 var_dump($article);
 echo '</br>';

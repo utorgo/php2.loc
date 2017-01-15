@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: upt
- * Date: 30.12.2016
- * Time: 18:39
- */
 
 namespace App\Models;
-
 
 class User extends Model
 {
