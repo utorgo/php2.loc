@@ -1,5 +1,5 @@
 <?php
-use App\Models\User;
+//use App\Models\User;
 use App\Views\View;
 
 require __DIR__ . '/autoload.php';
