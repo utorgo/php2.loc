@@ -10,8 +10,8 @@ class Db
     protected $dbh;
 
     protected function __construct()
-    {
-        $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=test','test','+1279484');
+    {    	
+        $this->dbh = new \PDO('mysql:host=localhost;dbname=test','test','+1279484');
     }
 
     public function execute($sql, $substArr)

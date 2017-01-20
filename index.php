@@ -1,7 +1,7 @@
 <?php
     //use App\Models\User;
     use App\Views\View;
-use App\Models\News;
+    use App\Models\News;
 
     require __DIR__ . '/autoload.php';
     //require __DIR__ . '/vendor/autoload.php';
@@ -16,8 +16,8 @@ use App\Models\News;
     
     $news = new \App\Models\User();
     
-    $news->email = 'mail@pup.com';
+    $news->email = 'mail@tip.com';
     
-    $news->name = 'Пупкин';
+    $news->name = 'Типкин';
 	
     $news->insert();
