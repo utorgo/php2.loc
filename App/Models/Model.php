@@ -19,12 +19,11 @@ abstract class Model
 
 		return $db->query(
 				'SELECT * FROM ' . static::TABLE, //self::TABLE, //self::$table,
-				static::class, //self::class //'App\Models\User'
-				[':id' => 1]
+				static::class //self::class //'App\Models\User'				
 				);
 	}
 
-	public static function findById($id='1')
+	public static function findById($id='0')
 	{
 		$db = \App\Db::instance();
 
@@ -55,10 +54,9 @@ abstract class Model
 			$values[':'.$k] = $v;
 		}
 		
-		$db = \App\Db::instance();
-		
+		$db = \App\Db::instance();		
 		$query = 'INSERT INTO ' . static::TABLE . ' ('. implode(', ', $columns) .') VALUES ('. implode(' ,', array_keys($values)) .')';
-		
+		//echo $db->lastInsertId();
 		return $db->execute($query, $values);		
 		
 	}

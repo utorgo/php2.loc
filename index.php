@@ -20,4 +20,6 @@
     
     $news->name = 'Типкин';
 	
-    $news->insert();
+    $news->id = $news->insert();
+    
+    echo $news->id;

@@ -14,14 +14,17 @@ class Db
         $this->dbh = new \PDO('mysql:host=localhost;dbname=test','test','+1279484');
     }
 
-    public function execute($sql, $substArr)
+    public function execute($sql, $substArr = [':id' => ''])
     {
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($substArr);
+        if ($res){
+        	return $this->dbh->lastInsertId();        	
+        }        
         return $res;
     }
 
-    public function query($sql, $class, $substArr)
+    public function query($sql, $class, $substArr = [':id' => ''])
     {
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($substArr);
@@ -29,6 +32,5 @@ class Db
             return $sth->fetchAll(\PDO::FETCH_CLASS,$class);
         }
         return [];
-    }
-
+    }    
 }

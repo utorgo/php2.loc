@@ -7,13 +7,7 @@ class Config
     use Singleton;
 
     public $data = [];
-    public $connSettingsArray = [];
-    protected $db;
-    protected $host;
-    protected $dbname;
-    protected $username;
-    protected $password;
-
+    public $connSettingsArray = []; 
     protected $pathToConfig = __DIR__ . '/../config.txt';
 
     protected function __construct()
