@@ -17,44 +17,22 @@
             border: 1px dotted;
         }
     </style>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    
 </head>
 <body>
 
-    <h1>Содержание новости:</h1>
-    <hr>
+	<h1>Содержание новости:</h1>
+    <hr>   
+       
     <?php if(isset($_GET['id'])) { $id = (int)$_GET['id'] ?>
-    <h2><?php echo $articles[$id]->getName(); ?></h2>
-    <p><?php echo $articles[$id]->getContent(); }?></p>
-    <a href="/index.php">Назад</a>
-
-    <!-- Bootstrap core JavaScript
-   ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+    <form action="article.php" method="post">
+    	<textarea name="content" rows="2" cols="100"><?php echo $articles[$id]->getName(); ?></textarea>     	
+     	<br></br>     	
+     	<textarea name="content" rows="10" cols="100"><?php echo $articles[$id]->getContent(); }?></textarea>      	        	
+    </form>    
+    
+    <a href="/index.php">Назад</a>    
 
 </body>
 </html>

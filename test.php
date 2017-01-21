@@ -13,6 +13,6 @@ require __DIR__ . '/autoload.php';
 //var_dump($singleton3);
 
 
-$config = \App\Config::instance();
+// $config = \App\Config::instance();
+// echo $config->data[$config->connSettingsArray['db']][$config->connSettingsArray['host']];
 
-echo $config->data[$config->connSettingsArray['db']][$config->connSettingsArray['host']];

@@ -56,8 +56,13 @@ abstract class Model
 		
 		$db = \App\Db::instance();		
 		$query = 'INSERT INTO ' . static::TABLE . ' ('. implode(', ', $columns) .') VALUES ('. implode(' ,', array_keys($values)) .')';
-		//echo $db->lastInsertId();
+		
 		return $db->execute($query, $values);		
+		
+	}
+	
+	public function update($id)
+	{
 		
 	}
 }

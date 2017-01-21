@@ -14,12 +14,12 @@
 
     $view->display(__DIR__ . '/templates/news.php');
     
-    $news = new \App\Models\User();
+//     $user = new \App\Models\User();    
+//     $user->email = 'mail@tip.com';    
+//     $user->name = 'Типкин';	
+//     $user->id = $news->insert();    
+//     echo $user->id;
+
     
-    $news->email = 'mail@tip.com';
+
     
-    $news->name = 'Типкин';
-	
-    $news->id = $news->insert();
-    
-    echo $news->id;
