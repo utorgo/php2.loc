@@ -16,6 +16,10 @@ class Db
 
     public function execute($sql, $substArr = [':id' => ''])
     {
+    	var_dump($sql);
+    	echo '</br>';
+    	var_dump($substArr);
+    	
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($substArr);
         if ($res){
