@@ -17,4 +17,14 @@ class News extends Model
     {
         return $this->content;
     }
+    
+    public function setName($name)
+    {
+    	$this->name = $name;
+    }
+    
+    public function setContent($content)
+    {
+    	$this->content = $content;
+    }
 }

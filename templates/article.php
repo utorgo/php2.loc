@@ -28,8 +28,16 @@
 	    	<textarea name="content" rows="2" cols="100"><?php echo $articles[$id]->getName(); ?></textarea>     	
 	     	<br></br>     	
 	     	<textarea name="content" rows="10" cols="100"><?php echo $articles[$id]->getContent(); }?></textarea>      	        	
-	    </form>    
+	    </form>	        
 	    
+	    <?php 
+		    $article = $articles[$id];
+		    //$article->id= $id;
+		    $article->setName('pip222@mail.com');
+		    $article->setContent('ReПипкин');
+		    $res = $article->update();
+	    ?>
+	    	    
 	    <a href="/index.php">Назад</a>    
 	
 	</body>

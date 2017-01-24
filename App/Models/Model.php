@@ -23,6 +23,13 @@ abstract class Model
 				);
 	}
 
+	
+	/**
+	 * @param string $id
+	 * @return unknown
+	 * @property int $age
+	 * @deprecated
+	 */
 	public static function findById($id='0')
 	{
 		$db = \App\Db::instance();
